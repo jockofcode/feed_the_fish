@@ -2,11 +2,6 @@ require "sdl"
 
 SDL::Log.open("/tmp/sdl_feed_the_fish.log")
 
-# Spinel's __dir__ always resolves to this entry script's own directory, so
-# the font ships inside this repo rather than reaching into the sdl
-# dependency's cache/vendor location (see sdl/fonts.rb's comment).
-FONT_PATH = File.join(__dir__, "..", "assets", "fonts", "VT323-Regular.ttf")
-
 WIDTH  = 960
 HEIGHT = 650
 
@@ -464,7 +459,7 @@ end
 # ---- Main loop ----
 
 SDL::Screen.open("Feed the Fish", width: WIDTH, height: HEIGHT) do |window, renderer|
-  font      = SDL::Font.new(FONT_PATH, 20)
+  font      = SDL::Font.bundled(SDL::Fonts::VT323_NAME, 20)
   world     = new_world
   last_tick = SDL::Screen.ticks
   running   = true

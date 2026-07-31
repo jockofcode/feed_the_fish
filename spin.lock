@@ -3,7 +3,7 @@
 [lock.sdl]
 version = "0.1.0"
 git = "https://github.com/jockofcode/sdl"
-ref = "4f1ad48886e9c0891465bd81e5ebe980cbeae3db"
+ref = "a747c25105e6457e966ded383da92100eb50c1be"
 
 [lock.public_sans]
 version = "0.0.0"
