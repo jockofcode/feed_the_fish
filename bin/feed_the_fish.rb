@@ -381,7 +381,7 @@ def draw_fish(renderer, fish, origin_x, origin_y)
   tail_tip_x  = (sx - facing * 21.0).round
   tail_base_x = (sx - facing * 10.0).round
   tail_cy     = (sy + wag * 0.4).round
-  fill_tapered_h(renderer, tail_cy, tail_tip_x, 2, tail_base_x, 7,
+  fill_tapered_h(renderer, tail_cy, tail_tip_x, 9, tail_base_x, 3,
                  dark[0], dark[1], dark[2], dark[3])
 
   fill_ellipse(renderer, sx.round, sy.round, 11, 7, color[0], color[1], color[2], color[3])
